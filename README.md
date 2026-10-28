@@ -87,9 +87,10 @@ Automated classification is treated here as an exploratory analytical tool, not 
 
 ## Repository Structure
 
-```text
 unesco-heritage-text-classification/
+├── .gitignore
 ├── README.md
+├── requirements.txt
 ├── figures/
 │   ├── model_comparison.png
 │   └── category_f1_comparison.png
@@ -99,9 +100,21 @@ unesco-heritage-text-classification/
 
 ## Reproducibility
 
-The analysis was developed in Python using a Jupyter notebook in Visual Studio Code. The notebook documents the data collection, preprocessing, model training, and evaluation steps.
+The analysis was developed in Python using a Jupyter notebook in Visual Studio Code. The notebook documents the data collection through the UNESCO API, data-quality assessment, preprocessing, TF-IDF feature representation, model training, and evaluation.
 
-The current repository contains the analysis notebook and result figures. Installation instructions and a requirements file will be added when the repository is finalized.
+### How to Reproduce the Analysis
+
+1. Clone or download this repository.
+2. Install the required Python libraries:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Open `notebooks/01_heritage_data_exploration.ipynb` in VS Code with the Python and Jupyter extensions installed.
+4. Run the notebook cells in order. The notebook retrieves records from the UNESCO API, so an internet connection is required.
+
+The repository includes the analysis notebook, the model-comparison figures, and the Python dependency list. The reported results were obtained using an 80/20 stratified train-test split with a fixed random seed.
 
 ## Project Context
 
